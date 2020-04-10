@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+    .responsive {
+      width: 100%;
+      height: auto;
+      position: center;
+    }
+    /*Added below on 22nd Feb 2020 at 1 PM*/
+    table,
+    th,
+    td {
+      border: 0px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: justify;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /*Added below on 22nd Feb 2020 at 1 PM*/
+    td {
+      padding: 10px;
+      text-align: justify;
+    }
+    /*Added on 18th Feb 2020 at 8:14 PM*/
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background: white;
+      overflow-x: hidden;
+      padding-top: 60px;
+    }
+    .sidenav a {
+      padding: 10px 10px 10px 40px; /*8px 8px 8px 32px*/
+      text-decoration: none;
+      font-size: 25px;
+      color: #000000;
+      display: block;
+    }
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      color: #000000;
+    }
+    #mainSideNav {
+      padding: 16px;
+    }
+
+    @media screen and (max-height: 100%) {
+      .sidenav {
+        padding-top: 15px;
+      }
+      .sidenav a {
+        font-size: 18px;
+      }
+      br {
+        display: none;
+      }
+    }
+    p {
+      word-spacing: 5px;
+      text-align: justify;
+      line-height: 3;
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+    }
+    .center-div {
+      margin: 0 auto;
+      max-width: 500px;
+      height: 100px;
+      border-radius: 3px;
+    }
+    h2 {
+      text-align: justify;
+      padding-left: 10px;
+    }
+  </style>
+  <body>
+    <!--Added below on 18th Feb 2020 at 8:15 PM-->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="/">Home</a>
+      <a href="/mantras.html">Mantras</a>
+      <a href="/deity.html">Deities</a>
+      <a href="#">About</a>
+    </div>
+    <div id="mainSideNav">
+      <span
+        style="font-size:30px;cursor:pointer;color:#000000;"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+    </div>
+    <!--
+    <img
+      src="/images/hanumanimage_3.jpg"
+      class="responsive"
+      width="auto"
+      height="auto"
+    />
+  -->
+    <div class="center-div">
+      <h1 style="text-align: center">
+        Durga Aarti
+      </h1>
+      <br />
+
+      <h2>English</h2>
+      <p>
+        Jai Ambe Gauri Maiya, Jai Shyama Gauri<br />
+        Tumko Nish-din Dhyavat, Hari Brahma Shivri <br />
+        Om Jai Ambe Gauri ॥1॥ <br /><br />
+
+        Maang Sindoor Virajat, Tiko Mrig-mad Ko <br />
+        Ujjwal Se Dou Naina, Chandra Badan Niko <br />
+        Om Jai Ambe Gauri ॥2॥ <br /><br />
+
+        Kanak Samaan Kalewar, Raktaambar Raaje<br />
+        Rakt Pushp Galmala, Kanthan Par Saaje <br />
+        Om Jai Ambe Gauri ॥3॥ <br /><br />
+
+        Kehri Vahan Rajat, Kharag Khapar Dhaari <br />
+        Sur Nar Muni Jan Sevat, Tinkay Dukh Haari <br />
+        Om Jai Ambe Gauri ॥4॥ <br /><br />
+
+        Kanan Kundal Shobhit, Naasagre Moti<br />
+        Kotik Chandra Divakar, Rajat Some Jyoti <br />
+        Om Jai Ambe Gauri ॥5॥ <br /><br />
+
+        Shumbh Nishumbh Vidare, Mahishasur Ghati <br />
+        Dhumra Vilochan Naina, Nishdin Madmati <br />
+        Om Jai Ambe Gauri ॥6॥ <br /><br />
+
+        Chandh Mundh Sanghare, Shonit Beej Hare<br />
+        Madhu Kaitabh Dou Maare, Sur Bhaya-heen Kare ॥7॥ <br />
+        Om Jai Ambe Gauri ॥7॥ <br /><br />
+
+        Brahmani Rudrani, Tum Kamla Rani <br />
+        Aagam Nigam Bakhani, Tum Shiv Patrani <br />
+        Om Jai Ambe Gauri ॥8॥ <br /><br />
+
+        Chousath Yogini Gavat, Nritya Karat Bhairon<br />
+        Baajat Taal Mridanga, Aru Baajat Damaroo <br />
+        Om Jai Ambe Gauri ॥9॥ <br /><br />
+
+        Tum Ho Jag Ki Maata, Tum Hi Ho Bharta <br />
+        Bhaktan Ki Dukh Harata, Sukh Sampati Karata <br />
+        Om Jai Ambe Gauri ॥10॥ <br /><br />
+
+        Bhuja Chaar Ati Shobit, Khadag Khappar-dhari<br />
+        Man-vaanchit Phal Pavat, Sevat Nar Naari <br />
+        Om Jai Ambe Gauri ॥11॥ <br /><br />
+
+        Kanchan Thaal Virajat, Agar Kapoor Baati <br />
+        Shri Maal-ketu Mein Rajat, Koti Ratan Jyoti <br />
+        Om Jai Ambe Gauri ॥12॥ <br /><br />
+
+        Shri Ambe-ji Ki Aarti, Jo Koi Nar Gaave<br />
+        Kahat Shivanand Swami, Sukh Sampati Paave <br />
+        Om Jai Ambe Gauri ॥13॥ <br /><br />
+      </p>
+      <br /><br />
+
+      <h2>Devanagari Script</h2>
+      <p>
+        जय अम्बे गौरी, मैया जय श्यामा गौरी ।<br />
+        तुमको निशदिन ध्यावत, हरि ब्रह्मा शिवरी । <br />
+        ॐ जय अम्बे गौरी ॥1॥<br /><br />
+
+        मांग सिंदूर विराजत, टीको मृगमद को ।<br />
+        उज्जवल से दो‌उ नैना, चन्द्रबदन नीको ।<br />
+        ॐ जय अम्बे गौरी ॥2॥<br /><br />
+
+        कनक समान कलेवर, रक्ताम्बर राजै ।<br />
+        रक्त पुष्प गलमाला, कण्ठन पर साजै । <br />
+        ॐ जय अम्बे गौरी ॥3॥<br /><br />
+
+        केहरि वाहन राजत, खड़ग खप्परधारी ।<br />
+        सुर नर मुनिजन सेवक, तिनके दुखहारी ।<br />
+        ॐ जय अम्बे गौरी ॥4॥<br /><br />
+
+        कानन कुण्डल शोभित, नासाग्रे मोती ।<br />
+        कोटिक चन्द्र दिवाकर, राजत सम ज्योति । <br />
+        ॐ जय अम्बे गौरी ॥5॥<br /><br />
+
+        शुम्भ निशुम्भ विडारे, महिषासुर घाती ।<br />
+        धूम्र विलोचन नैना, निशदिन मदमाती ।<br />
+        ॐ जय अम्बे गौरी ॥6॥<br /><br />
+
+        चण्ड मुण्ड संघारे, शोणित बीज हरे ।<br />
+        मधुकैटभ दो‌उ मारे, सुर भयहीन करे ।<br />
+        ॐ जय अम्बे गौरी ॥7॥<br /><br />
+
+        ब्रहमाणी रुद्राणी तुम कमला रानी ।<br />
+        आगम निगम बखानी, तुम शिव पटरानी । <br />
+        ॐ जय अम्बे गौरी ॥8॥<br /><br />
+
+        चौसठ योगिनी गावत, नृत्य करत भैरुं ।<br />
+        बाजत ताल मृदंगा, अरु बाजत डमरु । <br />
+        ॐ जय अम्बे गौरी ॥9॥<br /><br />
+
+        तुम हो जग की माता, तुम ही हो भर्ता ।<br />
+        भक्‍तन् की दुःख हरता, सुख-सम्पत्ति करता । <br />
+        ॐ जय अम्बे गौरी ॥10॥<br /><br />
+
+        भुजा चार अति शोभित, खड़ग खप्परधारी ।<br />
+        मनवांछित फल पावत, सेवत नर नारी ।<br />
+        ॐ जय अम्बे गौरी ॥11॥<br /><br />
+
+        कंचन थाल विराजत, अगर कपूर बाती ।<br />
+        श्री मालकेतु में राजत, कोटि रतन ज्योति । <br />
+        ॐ जय अम्बे गौरी ॥12॥<br /><br />
+
+        श्री अम्बे जी की आरती, जो को‌ई नर गावै ।<br />
+        कहत शिवानन्द स्वामी, सुख सम्पत्ति पावै । <br />
+        ॐ जय अम्बे गौरी ॥13॥<br /><br />
+      </p>
+      <br /><br />
+
+      <h2>Meaning in English</h2>
+      <p>
+        Jai Ambe Gauri Maiya, Jai Shyama Gauri<br />
+        Tumko Nish-din Dhyavat, Hari Brahma Shivri <br />
+        Om Jai Ambe Gauri ॥1॥ <br />
+        <font color="blue">
+          Glory to you, divine mother Gauri, glory to you, O Parvati (Shyama),
+          who is so rich in maiden grace, the object of daily meditation by
+          Vishnu, Brahma and Shiva.</font
+        >
+        <br /><br />
+
+        Maang Sindoor Virajat, Tiko Mrig-mad Ko <br />
+        Ujjwal Se Dou Naina, Chandra Badan Niko <br />
+        Om Jai Ambe Gauri ॥2॥ <br />
+        <font color="blue">
+          On your forehead is a resplendent mark of vermilion along with a mark
+          of musk which signifies signifies good luck. Your twin eyes are bright
+          and your face is as beautiful as the moon.</font
+        >
+        <br /><br />
+
+        Kanak Samaan Kalewar, Raktaambar Raaje<br />
+        Rakt Pushp Galmala, Kanthan Par Saaje <br />
+        Om Jai Ambe Gauri ॥3॥ <br />
+        <font color="blue">
+          Your body with a tinge of gold is splendidly dressed in red attire; on
+          your throat lies a wreath of red blossoms just as beautiful as a
+          necklace.</font
+        >
+        <br /><br />
+
+        Kehri Vahan Rajat, Kharag Khapar Dhaari <br />
+        Sur Nar Muni Jan Sevat, Tinkay Dukh Haari <br />
+        Om Jai Ambe Gauri ॥4॥ <br />
+        <font color="blue">
+          Your vehicle, the lion, is in keeping with your splendid form; you
+          bear a sword and a skull in your hands, and on you attend the gods,
+          men, hermits and your votaries whose grief you drive away.</font
+        >
+        <br /><br />
+
+        Kanan Kundal Shobhit, Naasagre Moti<br />
+        Kotik Chandra Divakar, Rajat Some Jyoti <br />
+        Om Jai Ambe Gauri ॥5॥ <br />
+        <font color="blue">
+          You are adorned with rings on your ears and with pearl on the tip of
+          your nose, your radiance looks as splendid as that of myriad of suns
+          and moons.</font
+        >
+        <br /><br />
+
+        Shumbh Nishumbh Vidare, Mahishasur Ghati <br />
+        Dhumra Vilochan Naina, Nishdin Madmati <br />
+        Om Jai Ambe Gauri ॥6॥ <br />
+        <font color="blue">
+          Slayer of the demon Mahisha, you tore apart the bodies of Shumbha,
+          Nishumbha and Dhuumravilochana. In the battle waged against them your
+          eyes reflected a frenzy of fury everyday and night.</font
+        >
+        <br /><br />
+
+        Chandh Mundh Sanghare, Shonit Beej Hare<br />
+        Madhu Kaitabh Dou Maare, Sur Bhaya-heen Kare ॥7॥ <br />
+        Om Jai Ambe Gauri ॥7॥ <br />
+        <font color="blue">
+          Your vehicle, the lion, is in keeping with your splendid form; you
+          bear a sword and a skull in your hands, and on you attend the gods,
+          men, hermits and your votaries whose grief you drive away.</font
+        >
+        <br /><br />
+
+        Brahmani Rudrani, Tum Kamla Rani <br />
+        Aagam Nigam Bakhani, Tum Shiv Patrani <br />
+        Om Jai Ambe Gauri ॥8॥ <br />
+        <font color="blue">
+          You are the beloved consort of Brahma, Rudra and Vishnu. The Vedas and
+          the Shastras describe you as the queen consort of Lord Shiva.</font
+        >
+        <br /><br />
+
+        Chousath Yogini Gavat, Nritya Karat Bhairon<br />
+        Baajat Taal Mridanga, Aru Baajat Damaroo <br />
+        Om Jai Ambe Gauri ॥9॥ <br />
+        <font color="blue">
+          Sixty-four Yoginis chorus your praise and glorify you, while Shiva
+          dances in tune to the accompaniment of the sound of Mridanga and
+          drum.</font
+        >
+        <br /><br />
+
+        Tum Ho Jag Ki Maata, Tum Hi Ho Bharta <br />
+        Bhaktan Ki Dukh Harata, Sukh Sampati Karata <br />
+        Om Jai Ambe Gauri ॥10॥ <br />
+        <font color="blue">
+          You are mother of the entire universe, its sustainer, reliever of your
+          devotees’ affliction and bestower of happiness and prosperity.</font
+        >
+        <br /><br />
+
+        Bhuja Chaar Ati Shobit, Khadag Khappar-dhari<br />
+        Man-vaanchit Phal Pavat, Sevat Nar Naari <br />
+        Om Jai Ambe Gauri ॥11॥ <br />
+        <font color="blue">
+          The four arms have adorned your persona, while the hand raised in
+          benediction reveals your benign aspect. Those men and women who
+          worship shall have all their cherished wishes ever fulfilled.</font
+        >
+        <br /><br />
+
+        Kanchan Thaal Virajat, Agar Kapoor Baati <br />
+        Shri Maal-ketu Mein Rajat, Koti Ratan Jyoti <br />
+        Om Jai Ambe Gauri ॥12॥ <br />
+        <font color="blue">
+          In a golden platter are beautifully laid aloe and camphor, both of
+          which have lighted to be waved before you; in the radiance of your
+          forehead is reflected the splendour of the myriad gems.</font
+        >
+        <br /><br />
+
+        Shri Ambe-ji Ki Aarti, Jo Koi Nar Gaave<br />
+        Kahat Shivanand Swami, Sukh Sampati Paave <br />
+        Om Jai Ambe Gauri ॥13॥ <br />
+        <font color="blue">
+          Anyone who does your pooja, says Shivanand Swami that they will always
+          get health and happiness in their lives.</font
+        >
+        <br /><br />
+      </p>
+      <br /><br />
+
+      <h2 style="text-align: center">
+        <a href="/pages/durga/durga-all.html" target="_blank"
+          >All Durga Mantras</a
+        >
+      </h2>
+      <br /><br />
+      <br /><br />
+    </div>
+
+    <!--Added below on 18th Feb 2020 at 8:17 PM-->
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <!--Added above on 18th Feb 2020 at 8:17 PM-->
+  </body>
+</html>
