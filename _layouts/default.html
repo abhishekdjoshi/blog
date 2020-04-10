@@ -1,9 +1,138 @@
 <!DOCTYPE html>
 <html>  <!-- Added ⚡ lang="en" as part of AMP-->
-  <head>    
+  <head>
+    
+    <!-- Added style elemnts on 10 April 2020 at 11:58 AM -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Abhishek Joshi" content="kclstr.com" />
+    <title>Find the Mantra and Devotional Hymns of all Gods</title>
+    <meta
+    name="description"
+    content="Learn the mantras of your favorite deity or God. Read the mantra in English and Hindi or Sanskrit."
+  />
+  <link
+    rel="canonical"
+    href="https://kclstr.com/"
+  />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,700"
+      rel="stylesheet"
+    />
+    <link href="css/main.css" rel="stylesheet" />
+
+    <!-- Added on 18th Feb 2020 at 12:05 AM-->
+    <style>
+      html {
+        /*Added html in style on 21 March 2020 at 2010 hours */
+        box-sizing: border-box;
+      }
+      body {
+        /*background: url("../images/Searchs_01422.jpg");*/
+        font-family: "Lato", sans-serif;
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background: white;
+        overflow-x: hidden;
+        padding-top: 60px;
+      }
+      .sidenav a {
+        padding: 10px 10px 10px 40px; /*8px 8px 8px 32px*/
+        text-decoration: none;
+        font-size: 25px;
+        color: #000000;
+        display: block;
+      }
+
+      .sidenav a:hover {
+        color: #000000; /*#f1f1f1*/
+      }
+
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        color: #000000;
+      }
+
+      #mainSideNav {
+        padding: 16px;
+      }
+
+      @media screen and (max-height: 100%) {
+        .sidenav {
+          padding-top: 15px;
+        }
+        .sidenav a {
+          font-size: 18px;
+        }
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      /*Added below on 21 March 2020 at 8:10 PM */
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      /*@media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }*/
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        padding: 10px 16px 10px;
+        height: auto;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .popular_block {
+        padding-bottom:80px;
+        width:auto;
+        height:auto;
+      }
+      /*Added above on 21 March 2020 at 8:10 PM */
+    </style>
+    
+    
+    
+    
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
+    {% include analytics.html %}
     
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     {% if page.keywords %}
@@ -11,21 +140,11 @@
     {% else %}
     <meta name="keywords" content="your-default-comma-separated-keywords" />
     {% endif %}
-    
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
     {% seo %}
-    
-    <!-- {% if site.google_analytics and jekyll.environment == 'production' %}
-    {% include analytics.html %}
-    {% endif %} -->
     
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
@@ -34,10 +153,395 @@
       enable_page_level_ads: true
       });
     </script>
-    
-    <script id="dsq-count-scr" src="//https-abhishekdjoshi-github-io.disqus.com/count.js" async></script>
-    {% include analytics.html %}
   </head>
+  
+    <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="/">Home</a>
+      <a href="/mantras.html">Mantras</a>
+      <a href="/deity.html">Deities</a>
+      <a href="#">About</a>
+    </div>
+    <div id="mainSideNav">
+      <span
+        style="font-size:30px;cursor:pointer;color:#000000;"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+    </div>
+
+    <div class="s013">
+      <form id="myForm" autocomplete="off" onsubmit="return searchVisa()">
+        <fieldset>
+          <legend>Find your Mantras</legend>
+        </fieldset>
+        <div class="inner-form">
+          <div class="left">
+            <div class="input-wrap first">
+              <div class="input-field first">
+                <div class="autocomplete" style="width:100%;">
+                  <label>Select the deity or hymn/mantra</label>
+                  <input
+                    id="firstInput"
+                    type="text1"
+                    placeholder="eg: Ram, Hanuman, Durga Stotra, Hanuman Chalisa"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-search" type="submit">SEARCH</button>
+        </div>
+        <div class="cities">
+          <p>
+            Your search for devotional hymns or mantras is over. Find all the
+            information about devotional hymns and their meanings at one place.
+            No more confusion.
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!--Added below on 21 March 2020 at 8:10 PM-->
+    <div class="popular_block">
+    <h2>Most Popular Hymns/Mantras</h2>
+    <br/>
+    <div class="row">
+      <div class="column">
+          <img
+            src="/images/hanuman_1.jpeg"
+            style="max-width:100%;height:auto;border:1px solid #d4d4d4;"
+          />
+          <div class="container">
+            <a href="/pages/hanuman/chalisa.html" target="_blank" style="color:black"
+              >Hanuman Chalisa</a
+            >
+            </div>
+      </div>
+      <div class="column">
+          <img
+            src="/images/shiva_1.jpeg"
+            style="max-width:100%;height:auto;border:1px solid #d4d4d4;"
+          />
+          <div class="container">
+            <a href="/pages/shiva/maha-mrityunjaya.html" target="_blank" style="color:black"
+              >Maha Mrityunjaya Mantra</a
+            >
+            </div>
+      </div>
+      <div class="column">
+          <img
+            src="/images/durga_1.jpeg"
+            style="max-width:100%;height:auto;border:1px solid #d4d4d4;"
+          />
+          <div class="container">
+            <a href="/pages/durga/stotra.html" target="_blank" style="color:black"
+              >Durga Stotra</a
+            >
+            </div>
+      </div>
+    <a href="/mantras.html" target="_blank" style="color:black;float:right;padding-right:20px;">View All</a>
+    </div>
+    <!--Added above on 21 March 2020 at 8:10 PM-->
+
+
+    <!--Added below on 21 March 2020 at 8:40 PM-->
+    <div class="popular_block">
+    <h2>Most Popular Categories</h2>
+    <br/>
+    <div class="row">
+      <div class="column">
+          <img
+            src="/images/hanuman_1.jpeg"
+            style="max-width:100%;height:auto;border:1px solid #d4d4d4;"
+          />
+          <div class="container">
+            <a href="/pages/hanuman/all.html" target="_blank" style="color:black;"
+              >Hanuman</a
+            >
+          </div>
+      </div>
+      <div class="column">
+          <img
+            src="/images/shiva_1.jpeg"
+            style="max-width:100%;height:auto;border:1px solid #d4d4d4;"
+          />
+          <div class="container">
+            <a href="/pages/shiva/shiva-all.html" target="_blank" style="color:black"
+              >Shiva</a
+            >
+          </div>
+      </div>
+      <div class="column">
+          <img
+            src="/images/durga_1.jpeg"
+            style="max-width:100%;height:auto;border:1px solid #d4d4d4;"
+          />
+          <div class="container">
+            <a href="/pages/durga/durga-all.html" target="_blank" style="color:black"
+              >Durga</a
+            >
+          </div>
+      </div>
+      <a href="/deity.html" target="_blank" style="color:black;float:right;padding-right:20px">View All</a>
+    </div>
+    <!--Added above on 21 March 2020 at 8:40 PM-->
+
+    <script>
+      /*const choices = new Choices("[data-trigger]", {
+        searchEnabled: false,
+        itemSelectText: ""
+      });*/
+    </script>
+    <!--Added below on 18th Feb 2020 at 12:08 AM-->
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+    <!--Added above on 18th Feb 2020 at 12:08 AM-->
+
+    <!--Added below on 17th Feb 2020 at 12:41 PM -->
+    <script>
+      function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
+      the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function(e) {
+          var a,
+            b,
+            i,
+            val = this.value;
+          /*close any already open lists of autocompleted values*/
+          closeAllLists();
+          if (!val) {
+            return false;
+          }
+          currentFocus = -1;
+          /*create a DIV element that will contain the items (values):*/
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+          /*append the DIV element as a child of the autocomplete container:*/
+          this.parentNode.appendChild(a);
+          /*for each item in the array...*/
+          for (i = 0; i < arr.length; i++) {
+            /*check if the item starts with the same letters as the text field value:*/
+            if (
+              arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+            ) {
+              /*create a DIV element for each matching element:*/
+              b = document.createElement("DIV");
+              /*make the matching letters bold:*/
+              b.innerHTML =
+                "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i].substr(val.length);
+              /*insert a input field that will hold the current array item's value:*/
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              /*execute a function when someone clicks on the item value (DIV element):*/
+              b.addEventListener("click", function(e) {
+                /*insert the value for the autocomplete text field:*/
+                inp.value = this.getElementsByTagName("input")[0].value;
+                /*close the list of autocompleted values,
+                  (or any other open lists of autocompleted values:*/
+                closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function(e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            /*If the arrow DOWN key is pressed,
+            increase the currentFocus variable:*/
+            currentFocus++;
+            /*and and make the current item more visible:*/
+            addActive(x);
+          } else if (e.keyCode == 38) {
+            //up
+            /*If the arrow UP key is pressed,
+            decrease the currentFocus variable:*/
+            currentFocus--;
+            /*and and make the current item more visible:*/
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            e.preventDefault();
+            if (currentFocus > -1) {
+              /*and simulate a click on the "active" item:*/
+              if (x) x[currentFocus].click();
+            }
+          }
+        });
+        function addActive(x) {
+          /*a function to classify an item as "active":*/
+          if (!x) return false;
+          /*start by removing the "active" class on all items:*/
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = x.length - 1;
+          /*add class "autocomplete-active":*/
+          x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+          /*a function to remove the "active" class from all autocomplete items:*/
+          for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+          }
+        }
+        function closeAllLists(elmnt) {
+          /*close all autocomplete lists in the document,
+        except the one passed as an argument:*/
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+              x[i].parentNode.removeChild(x[i]);
+            }
+          }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function(e) {
+          closeAllLists(e.target);
+        });
+      }
+
+      /*An array containing all the country names in the world:*/
+      window.countries = [
+        "Shiva",
+        "Brahma",
+        "Vishnu",
+        "Ganesha",
+        "Kartikeya",
+        "Murugan",
+        "Durga",
+        "Parvati",
+        "Lakshmi",
+        "Saraswati",
+        "Kali",
+        "Bhumi",
+        "Gayatri",
+        "Ganga",
+        "Narmada",
+        "Annapurna",
+        "Yamuna/Yami",
+        "Santoshi Mata",
+        "Swami Ayyappa",
+        "Raghavendra Swami",
+        "Agni",
+        "Dattatreya",
+        "Hanuman",
+        "Rahu",
+        "Ketu",
+        "Surya",
+        "Shani",
+        "Krishna",
+        "Kuber",
+        "Rudra/Shiva",
+        "Yama",
+        "Yellamma",
+        "Kamakhya Devi",
+        "Durga Aarti",
+        "Durga Chalisa",
+        "Durga Stotra",
+        "All",
+        "Hanuman Aarti",
+        "Hanuman Chalisa",
+        "Hanuman Stotra",
+        "Shiva Aarti",
+        "Shiva Tandava Stotra",
+        "Maha Mrityunjaya Mantra"
+      ];
+
+      /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+      autocomplete(document.getElementById("firstInput"), window.countries);
+    </script>
+
+    <script>
+      function searchVisa() {
+        var fromInput1 = document.getElementById("firstInput").value;
+        if (window.countries.includes(fromInput1) == false) 
+        {
+            window.alert("Sorry. I cannot find what you are looking for");
+            document.getElementById("myForm").action = "/";
+        } 
+        else 
+        {
+            switch (fromInput1) 
+            {
+                  case "Shiva":
+                    document.getElementById("myForm").action =
+                      "/pages/shiva/shiva-all.html";  
+                      break;
+                  case "Shiva Aarti":
+                    document.getElementById("myForm").action =
+                      "/pages/shiva/aarti.html";
+                    break;
+                  case "Shiva Tandava Stotra":
+                    document.getElementById("myForm").action =
+                      "/pages/shiva/tandava-stotra.html";
+                    break;
+                  case "Maha Mrityunjaya Mantra":
+                    document.getElementById("myForm").action =
+                      "/pages/shiva/maha-mrityunjaya.html";
+                    break;
+                  
+                  case "Durga":
+                    document.getElementById("myForm").action =
+                      "/pages/durga/durga-all.html";
+                    break;
+                  case "Durga Aarti":
+                    document.getElementById("myForm").action =
+                      "/pages/durga/aarti.html";
+                    break;
+                  case "Durga Chalisa":
+                    document.getElementById("myForm").action =
+                      "/pages/durga/chalisa.html";
+                    break;   
+                  case "Durga Stotra":
+                    document.getElementById("myForm").action =
+                      "/pages/durga/stotra.html";
+                    break;
+                  
+                  case "Hanuman":
+                    document.getElementById("myForm").action =
+                      "/pages/hanuman/hanuman-all.html";
+                    break;
+                  case "Hanuman Aarti":
+                    document.getElementById("myForm").action =
+                      "/pages/hanuman/aarti.html";
+                    break;
+                  case "Hanuman Chalisa":
+                    document.getElementById("myForm").action =
+                      "/pages/hanuman/chalisa.html";
+                    break;
+                  case "Hanuman Stotra":
+                    document.getElementById("myForm").action =
+                      "/pages/hanuman/stotra.html";
+                    break;
+                  default:
+                    document.getElementById("myForm").action =
+                      "/pages/comingsoon.html";
+                    break;
+                }
+            }
+        return true;
+      }
+    </script>
+  </body>
 
   
   <!--Old Content below, not functional since 10 April 2020 at 11:52 AM
